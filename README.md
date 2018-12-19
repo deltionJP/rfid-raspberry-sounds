@@ -48,6 +48,13 @@ current_sound_id = id 	#we set this here instead of above bc it may mess up on f
 * read.py - Testen van NFC tags.
 * write.py - schrijf naam van bestand op NFC tag. Voorbeeld: sound1.mp3
 
+Je kan de verschillende bestanden uitvoeren door:
+```
+sudo python SoundPlay.py
+sudo python read.py
+sudo python write.py
+```
+
 Ook kunnen de fragmenten op pauze gezet worden. Als je een tag leest en dus een fragment afspeeld, kan je daarna nog een keer dezelfde tag lezen. Dan wordt het fragment gepauzeerd. Scan je het voor de derde keer dan gaat het weer verder waar je was gebleven
 
 **Code automatisch uitvoeren**
