@@ -12,11 +12,18 @@ wat ben je nodig:
 ### Hieronder staan sites met informatie hoe je je RaspberryPi gebruikt met RC522 NFC reader: 
 * [How to setup a Raspberry Pi RFID RC522 Chip - Pi My Life Up](https://pimylifeup.com/raspberry-pi-rfid-rc522/)
 * [RFID (RC522) - piddlerintheroot |  piddlerintheroot](https://www.piddlerintheroot.com/rfid-rc522-raspberry-pi/)
+### Belangrijk!!!!
+Je moet je NFC tags (kaarten) wel beschrijven met ```write.py``` en niet met een telefoon, dan wordt de kaart niet goed beschreven en heb je kans dat de kaart niet meer werkt.
+
+### SoundPlay.py:
 
 De lijn hieronder geeft aan waar de muziek/video fragmenten staan, deze kan je uiteraard aanpassen.
 ```
-# SoundPlay.py
 directory = '/home/pi/sounds/'
+```
+Hieronder zie je ```id``` en ``` sound_name ```. ```id``` is het id van de NFC tag(kaart) en ```sound_name``` is de naam van het fragment, die je op de kaart gezet hebt met write.py
+```
+id, sound_name = reader.read()
 ```
 ### De Raspberry Pi 3 heeft een video/muziek player ingebouwd die werkt via de terminal : OMXPlayer
 * [OMXPlayer: An accelerated command line media player - Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/raspbian/applications/omxplayer.md)
@@ -30,8 +37,8 @@ directory = '/home/pi/sounds/'
 **Code automatisch uitvoeren**
 
 Met het bestand /etc/rc.local kan je, doormiddel van toevoegen van:
+* /ect/rc.local:
 ```
-# /ect/rc.local
 python /home/pi/projectmap/SoundPlay.py
 ```
 Automatisch laten afspelen.
