@@ -1,4 +1,7 @@
 # Project leerjaar 3
+
+* Play sounds/videos with NFC RFID RC522 Raspberry Pi
+
 Oorspronkelijk een video player, hier is het iets aangepast zodat ik mp3 bestanden kan afspelen.
 Videos werken ook.
 
