@@ -9,11 +9,16 @@ wat ben je nodig:
 * RFID RC522 Kit
 * RFID 13.56 MHz Cards
 
-### Follow these instructions on setting up the RFID kit w/ your Pi: 
+### Hieronder staan sites met informatie hoe je je RaspberryPi gebruikt met RC522 NFC reader: 
 * [How to setup a Raspberry Pi RFID RC522 Chip - Pi My Life Up](https://pimylifeup.com/raspberry-pi-rfid-rc522/)
 * [RFID (RC522) - piddlerintheroot |  piddlerintheroot](https://www.piddlerintheroot.com/rfid-rc522-raspberry-pi/)
 
-### The Raspberry Pi 3 has a video player preinstalled called: OMXPlayer
+De lijn hieronder geeft aan waar de muziek/video fragmenten staan, deze kan je uiteraard aanpassen.
+```
+# SoundPlay.py
+directory = '/home/pi/sounds/'
+```
+### De Raspberry Pi 3 heeft een video/muziek player ingebouwd die werkt via de terminal : OMXPlayer
 * [OMXPlayer: An accelerated command line media player - Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/raspbian/applications/omxplayer.md)
 
 ### Bestanden
@@ -26,6 +31,7 @@ wat ben je nodig:
 
 Met het bestand /etc/rc.local kan je, doormiddel van toevoegen van:
 ```
+# /ect/rc.local
 python /home/pi/projectmap/SoundPlay.py
 ```
 Automatisch laten afspelen.
