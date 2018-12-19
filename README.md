@@ -2,8 +2,6 @@
 Oorspronkelijk een video player, hier is het iets aangepast zodat ik mp3 bestanden kan afspelen.
 Videos werken ook.
 
-Kids love this video player.
-This is a great project for folks that are new to programming. 
 
 wat ben je nodig:
 
@@ -18,15 +16,19 @@ wat ben je nodig:
 ### The Raspberry Pi 3 has a video player preinstalled called: OMXPlayer
 * [OMXPlayer: An accelerated command line media player - Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/raspbian/applications/omxplayer.md)
 
-### Files
+### Bestanden
 * SoundPlay.py - Dit bestand scant de NFC tag en speeld het bestand af (Video is ook mogelijk)
 * read.py - Testen van NFC tags.
 * write.py - schrijf naam van bestand op NFC tag. Voorbeeld: sound1.mp3
 
 
-**Code execution at start up**
+**Code automatisch uitvoeren**
 
-You can have your code execute at runtime by adding it to the /etc/rc.local file
+Met het bestand /etc/rc.local kan je, doormiddel van toevoegen van:
+```
+python /home/pi/projectmap/SoundPlay.py
+```
+Automatisch laten afspelen.
 
 [rc.local - Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/linux/usage/rc-local.md)
 
